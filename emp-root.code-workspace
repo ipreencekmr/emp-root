@@ -1,0 +1,26 @@
+{
+  "folders": [
+    {
+      "path": "../../MFA/emp-root"
+    },
+    {
+      "path": "../../MFA/emp-container"
+    },
+    {
+      "path": "../../MFA/emp-employee"
+    },
+    {
+      "path": "../../MFA/emp-address"
+    },
+    {
+      "path": "../emp-footer"
+    },
+    {
+      "path": "../emp-header"
+    },
+    {
+      "path": "../emp-home"
+    }
+  ],
+  "settings": {}
+}
