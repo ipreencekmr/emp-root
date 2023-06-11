@@ -1,16 +1,16 @@
 {
   "folders": [
     {
-      "path": "../../MFA/emp-root"
+      "path": "../emp-root"
     },
     {
-      "path": "../../MFA/emp-container"
+      "path": "../emp-container"
     },
     {
-      "path": "../../MFA/emp-employee"
+      "path": "../emp-employee"
     },
     {
-      "path": "../../MFA/emp-address"
+      "path": "../emp-address"
     },
     {
       "path": "../emp-footer"
