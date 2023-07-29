@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  footer-service:
+    container_name: emp-footer
+    image: ipreencekmr/emp-footer
+    restart: on-failure
+    ports:
+      - 3005:3000
+
+  employee-service:
+    container_name: emp-employee
+    image: ipreencekmr/emp-employee
+    restart: on-failure
+    ports:
+      - 3006:3000
