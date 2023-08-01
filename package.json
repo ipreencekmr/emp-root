@@ -6,12 +6,17 @@
     "build:dev": "webpack --mode development",
     "build:start": "cd dist && PORT=3001 npx serve",
     "start": "webpack serve --open --mode development",
-    "start:live": "webpack serve --open --mode development --live-reload --hot"
+    "start:live": "webpack serve --open --mode development --live-reload --hot",
+    "serve": "node ./scripts/serve.js"
   },
+  "modules": [
+    "../emp-employee",
+    "../emp-footer"
+  ],
   "license": "MIT",
   "author": {
-    "name": "Jack Herrington",
-    "email": "jherr@pobox.com"
+    "name": "Prince K Sharma",
+    "email": "ipreencekmr@gmail.com"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
@@ -36,7 +41,9 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "bootstrap": "^5.3.1",
+    "npm": "^9.8.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "shelljs": "^0.8.5"
   }
 }
