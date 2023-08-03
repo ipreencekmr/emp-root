@@ -1,16 +1,21 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import Header from "emp_header/Header";
 import Footer from "emp_footer/Footer";
 import Container from "emp_container/Container";
 
-import "./index.css";
-
 const App = () => (
-  <React.Fragment>
+  <div>
     <Header></Header>
     <Container></Container>
     <Footer></Footer>
-  </React.Fragment>
+  </div>
 );
-ReactDOM.render(<App />, document.getElementById("app"));
+
+const globalApp = document.getElementById("app");
+
+const root = createRoot(globalApp);
+
+root.render(<App />);
+
+export default App;

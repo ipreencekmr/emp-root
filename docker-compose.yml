@@ -7,6 +7,15 @@ services:
     ports:
       - 3005:3000
 
+  container-service:
+    container_name: emp-container
+    image: ipreencekmr/emp-container
+    restart: on-failure
+    depends_on:
+      - home-service
+    ports:
+      - 3002:3002
+
   home-service:
     container_name: emp-home
     image: ipreencekmr/emp-home
