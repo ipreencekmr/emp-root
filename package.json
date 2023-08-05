@@ -7,7 +7,8 @@
     "build:start": "node server",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot",
-    "start:all": "node ./scripts/serve.js"
+    "start:all": "node ./scripts/serve.js",
+    "start:all-dev": "node ./scripts/serve-dev.js"
   },
   "modules": [
     "../emp-header",

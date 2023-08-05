@@ -16,7 +16,7 @@ const listen = async () => {
      console.log('listening module: '+module.name);
      shell.exec(`npm run build:start --prefix ${modulePath}`, { async: true });
    });
-   shell.exec(`npm run start --open`)
+   shell.exec(`npm run build:start --open`);
 };
 
 const serve = async () => {
