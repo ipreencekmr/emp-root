@@ -1,0 +1,61 @@
+version: "3.3"
+services:
+
+  root-service:
+    container_name: emp-root
+    image: ipreencekmr/emp-root
+    restart: on-failure
+    depends_on:
+      - footer-service
+      - header-service
+      - container-service
+    ports:
+      - 3001:3001
+
+  container-service:
+    container_name: emp-container
+    image: ipreencekmr/emp-container
+    restart: on-failure
+    depends_on:
+      - home-service
+    ports:
+      - 3002:3002
+
+  home-service:
+    container_name: emp-home
+    image: ipreencekmr/emp-home
+    restart: on-failure
+    depends_on:
+      - employee-service
+    ports:
+      - 3003:3003
+      
+  header-service:
+    container_name: emp-header
+    image: ipreencekmr/emp-header
+    restart: on-failure
+    ports:
+      - 3004:3000
+
+  footer-service:
+    container_name: emp-footer
+    image: ipreencekmr/emp-footer
+    restart: on-failure
+    ports:
+      - 3005:3000
+
+  employee-service:
+    container_name: emp-employee
+    image: ipreencekmr/emp-employee
+    restart: on-failure
+    depends_on:
+      - address-service
+    ports:
+      - 3006:3006
+
+  address-service:
+    container_name: emp-address
+    image: ipreencekmr/emp-address
+    restart: on-failure
+    ports:
+      - 3007:3007
