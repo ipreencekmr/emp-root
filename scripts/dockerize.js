@@ -1,20 +1,22 @@
 const { name, modules } = require("../package.json");
 let shell = require("shelljs");
 
-const listen = async () => {
+const build = async () => {
     modules.forEach(modulePath => {
         const module = require(`../${modulePath}/package.json`);
-        console.log(`listening module: ${module.name}`);
-        shell.exec(`npm run start --prefix ${modulePath}`, {
+        console.log(`dockerizing module: ${module.name}`);
+        shell.exec(`npm run build:docker --prefix ${modulePath}`, {
             async: true 
         });
     });
-    console.log(`listening module: ${name}`);
-    shell.exec("npm run start --open")
+    console.log(`dockerizing module: ${name}`);
+    shell.exec("npm run build:docker", {
+        async: true 
+    });
 };
 
 const serve = async () => {
-    await listen();
+    await build();
 };
 
 serve().catch((err) => {

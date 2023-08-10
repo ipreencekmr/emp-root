@@ -1,20 +1,22 @@
 const { name, modules } = require("../package.json");
 let shell = require("shelljs");
 
-const listen = async () => {
+const publish = async () => {
     modules.forEach(modulePath => {
         const module = require(`../${modulePath}/package.json`);
-        console.log(`listening module: ${module.name}`);
-        shell.exec(`npm run start --prefix ${modulePath}`, {
+        console.log(`publishing module: ${module.name}`);
+        shell.exec(`npm run publish --prefix ${modulePath}`, {
             async: true 
         });
     });
-    console.log(`listening module: ${name}`);
-    shell.exec("npm run start --open")
+    console.log(`publishing module: ${name}`);
+    shell.exec("npm run publish", {
+        async: true 
+    });
 };
 
 const serve = async () => {
-    await listen();
+    await publish();
 };
 
 serve().catch((err) => {

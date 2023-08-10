@@ -6,10 +6,13 @@
     "build:dev": "webpack --mode development",
     "build:start": "node server",
     "build:docker":"npm run build && docker build -t ipreencekmr/emp-root .",
+    "build:docker-all":"node ./scripts/dockerize.js",
     "start": "webpack serve --open --mode development",
     "start:live": "webpack serve --open --mode development --live-reload --hot",
     "start:all": "node ./scripts/serve.js",
     "start:all-dev": "node ./scripts/serve-dev.js",
+    "publish":"docker push ipreencekmr/emp-root",
+    "publish:all":"node ./scripts/publish.js",
     "test": "jest --no-cache --watchAll"
   },
   "modules": [
