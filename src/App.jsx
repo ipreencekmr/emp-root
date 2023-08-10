@@ -5,11 +5,11 @@ import Footer from "emp_footer/Footer";
 import Container from "emp_container/Container";
 
 const App = () => (
-  <div>
-    <Header></Header>
-    <Container></Container>
-    <Footer></Footer>
-  </div>
+    <div>
+        <Header></Header>
+        <Container></Container>
+        <Footer></Footer>
+    </div>
 );
 
 const globalApp = document.getElementById("app");
