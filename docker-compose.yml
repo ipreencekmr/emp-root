@@ -3,7 +3,7 @@ services:
 
   root-service:
     container_name: emp-root
-    image: ipreencekmr/emp-root
+    image: ipreencekmr/emp-root:latest
     restart: on-failure
     depends_on:
       - footer-service
@@ -14,7 +14,7 @@ services:
 
   container-service:
     container_name: emp-container
-    image: ipreencekmr/emp-container
+    image: ipreencekmr/emp-container:latest
     restart: on-failure
     depends_on:
       - home-service
@@ -23,7 +23,7 @@ services:
 
   home-service:
     container_name: emp-home
-    image: ipreencekmr/emp-home
+    image: ipreencekmr/emp-home:latest
     restart: on-failure
     depends_on:
       - employee-service
@@ -32,21 +32,21 @@ services:
       
   header-service:
     container_name: emp-header
-    image: ipreencekmr/emp-header
+    image: ipreencekmr/emp-header:latest
     restart: on-failure
     ports:
       - 3004:3000
 
   footer-service:
     container_name: emp-footer
-    image: ipreencekmr/emp-footer
+    image: ipreencekmr/emp-footer:latest
     restart: on-failure
     ports:
       - 3005:3000
 
   employee-service:
     container_name: emp-employee
-    image: ipreencekmr/emp-employee
+    image: ipreencekmr/emp-employee:latest
     restart: on-failure
     depends_on:
       - address-service
@@ -55,7 +55,7 @@ services:
 
   address-service:
     container_name: emp-address
-    image: ipreencekmr/emp-address
+    image: ipreencekmr/emp-address:latest
     restart: on-failure
     ports:
       - 3007:3007
