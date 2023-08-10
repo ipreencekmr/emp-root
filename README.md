@@ -9,6 +9,9 @@ Employee Management Root module is dependent on following child modules
 - [emp-employee](https://github.com/ipreencekmr/emp-employee)
 - [emp-address](https://github.com/ipreencekmr/emp-address)
 
+## Backend REST Service Repo
+
+- [Spring-Boot-Employee](https://github.com/ipreencekmr/Spring-Boot-Employee)
 
 ## Available Scripts 
 
@@ -40,6 +43,16 @@ You can open [http://localhost:3001/](http://localhost:3001/) to see the applica
 `docker-compose down`
 
 <img width="944" alt="docker-stopped" src="https://github.com/ipreencekmr/emp-root/assets/3636918/f6be7aa4-6250-466f-ae4b-03947f79a924">
+
+## User Interface
+
+![1 landing-page](https://github.com/ipreencekmr/emp-root/assets/3636918/89fb544c-dd3d-4509-b344-488ec0c8b0ef)
+
+![2 add-screen](https://github.com/ipreencekmr/emp-root/assets/3636918/e48f1da9-21ed-4360-8599-da1807e1a949)
+
+![3 validation-screen](https://github.com/ipreencekmr/emp-root/assets/3636918/004ba2a1-e5c6-4ddc-ab78-bb5ba3653b49)
+
+![4 confirmation-page](https://github.com/ipreencekmr/emp-root/assets/3636918/d8338992-c64e-439c-aba3-24f8eea22695)
 
 ## Tech Stack Used
 
