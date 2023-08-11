@@ -13,7 +13,10 @@
     "start:all-dev": "node ./scripts/serve-dev.js",
     "publish":"docker push ipreencekmr/emp-root",
     "publish:all":"node ./scripts/publish.js",
-    "test": "jest --no-cache --watchAll"
+    "test": "jest --no-cache",
+    "test:watch": "jest --no-cache --watchAll",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix"
   },
   "modules": [
     "../emp-header",
