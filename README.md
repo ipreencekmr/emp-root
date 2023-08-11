@@ -1,4 +1,9 @@
-# emp-root
+<h1 align="center">
+<img width="80" height="80" src="https://img.icons8.com/dotty/80/collaborator-male.png" alt="employee"/></br></br>
+Employee Management App
+</h1>
+
+<h2>Author:</h2><h3>Prince Kumar Sharma</h3></br></br>
 
 Employee Management Root module is dependent on following child modules
 
