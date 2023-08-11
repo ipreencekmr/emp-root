@@ -1,0 +1,31 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build Production
+      run: npm run build
+      
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ipreencekmr/emp-root
+      
+    - name: Docker Login
+      run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        
+    - name: Publish Image
+      run: docker push ipreencekmr/emp-root
