@@ -75,6 +75,12 @@ You can open [http://localhost:3001/](http://localhost:3001/) to see the applica
 - AWS ECS
 - Github Actions
 
+## Deployments
+
+- **Database:** db.learn-coding.xyz:3306
+- **API:** api.learn-coding.xyz:8080
+- **App:** app.learn-coding.xyz:3001
+
 ## Run 
 
 `docker-compose up`
